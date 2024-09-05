@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 
 namespace ManagerRDP
 {
-    internal interface IDataManager
+    public interface IDataManager
     {
-        public void AddRDP();
-
+        
+        RDPConnection AddRDP();
+        RDPConnection EditRDP();
+        RDPConnection DeleteRDP();
 
     }
 }

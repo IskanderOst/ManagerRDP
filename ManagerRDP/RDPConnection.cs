@@ -1,13 +1,21 @@
 ﻿namespace ManagerRDP
 {
-    internal class RDPConnection
+    public class RDPConnection
     {
-        public string URL { get; set; }
-        public int Port { get; set; }
+        public string URL { get; init; }
+        public int Port { get; init; }
+        public string User { get; init; }
+        public string Password { get; init; }
+        public bool UseVPN { get; init; }
 
-        public string User { get; set; }
-        public string Password { get; set; }
+        public RDPConnection(string uRL, int port, string user, string password, bool useVPN = false)
+        {
+            URL = uRL;
+            Port = port;
+            User = user;
+            Password = password;
+            UseVPN = useVPN;
+        }
 
-        public bool UseVPN { get; set; }
     }
 }
